@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/LZ77" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/LZW" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/Main.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/arithmeticCoding" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/datasets" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/golomb" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/huffman" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/org/apache/commons/io/FilenameUtils.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/org/commons" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/org/commons" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/results" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/testFiles" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/tunstall" charset="windows-1252" />
+  </component>
+</project>
