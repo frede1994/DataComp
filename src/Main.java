@@ -17,11 +17,7 @@ public class Main {
     private static final String ANSI_RESET = "\u001B[0m";   //Reset color
     private static final String ANSI_RED = "\u001B[31m";    //Red for compression
     private static final String ANSI_GREEN = "\u001B[32m";  //Green for decompression
-
-    //Hard-coded strings for testfiles
-    private static final String testFiles = "/Users/fj199/IdeaProjects/DataComp/src/testFiles";
-    private static final String datasets = "/Users/fj199/IdeaProjects/DataComp/src/datasets";
-    private static String results = "/Users/fj199/IdeaProjects/DataComp/src/results";
+    private static String results;
 
     public static void main(String[] args) {
         File datasetsFolder = null;
@@ -35,34 +31,36 @@ public class Main {
         String compressedPath;
         String decompressedPath;
         for (final File fileEntry : datasetsFolder.listFiles()) {
-            String datasetName = fileEntry.getName(); // Current dataset
-            datasetName = datasetName.substring(0, datasetName.length() - 4); // Strip .dat
-            printDatasetData(fileEntry.getAbsolutePath(), fileEntry.getName());
+            if (!fileEntry.getName().equals("results")) {
+                String datasetName = fileEntry.getName(); // Current dataset
+                datasetName = datasetName.substring(0, datasetName.length() - 4); // Strip .dat
+                printDatasetData(fileEntry.getAbsolutePath(), fileEntry.getName());
 
-            //Static Huffman
-            compressedPath = createFile(datasetName + "_compressed_statichuffman");
-            decompressedPath = createFile(datasetName + "_decompressed_statichuffman");
-            staticHuffman(fileEntry.getAbsolutePath(), compressedPath, decompressedPath, datasetName);
+                //Static Huffman
+                compressedPath = createFile(datasetName + "_compressed_statichuffman");
+                decompressedPath = createFile(datasetName + "_decompressed_statichuffman");
+                staticHuffman(fileEntry.getAbsolutePath(), compressedPath, decompressedPath, datasetName);
 
-            //Adaptive Huffman
-            compressedPath = createFile(datasetName + "_compressed_adaptivehuffman");
-            decompressedPath = createFile(datasetName + "_decompressed_adaptivehuffman");
-            adaptiveHuffman(fileEntry.getAbsolutePath(), compressedPath, decompressedPath, datasetName);
+                //Adaptive Huffman
+                compressedPath = createFile(datasetName + "_compressed_adaptivehuffman");
+                decompressedPath = createFile(datasetName + "_decompressed_adaptivehuffman");
+                adaptiveHuffman(fileEntry.getAbsolutePath(), compressedPath, decompressedPath, datasetName);
 
-            //Arithmetic Coding
-            compressedPath = createFile(datasetName + "_compressed_arithmeticcoding");
-            decompressedPath = createFile(datasetName + "_decompressed_arithmeticcoding");
-            arithmeticCoding(fileEntry.getAbsolutePath(), compressedPath, decompressedPath, datasetName);
+                //Arithmetic Coding
+                compressedPath = createFile(datasetName + "_compressed_arithmeticcoding");
+                decompressedPath = createFile(datasetName + "_decompressed_arithmeticcoding");
+                arithmeticCoding(fileEntry.getAbsolutePath(), compressedPath, decompressedPath, datasetName);
 
-            //Tunstall
-            compressedPath = createFile(datasetName + "_compressed_tunstall");
-            decompressedPath = createFile(datasetName + "_decompressed_tunstall");
-            tunstall(fileEntry.getAbsolutePath(), compressedPath, decompressedPath, datasetName);
+                //Tunstall
+                compressedPath = createFile(datasetName + "_compressed_tunstall");
+                decompressedPath = createFile(datasetName + "_decompressed_tunstall");
+                tunstall(fileEntry.getAbsolutePath(), compressedPath, decompressedPath, datasetName);
 
-            //LZ77
-            compressedPath = createFile(datasetName + "_compressed_lz77");
-            decompressedPath = createFile(datasetName + "_decompressed_lz77");
-            lz77(fileEntry.getAbsolutePath(), compressedPath, decompressedPath, datasetName);
+                //LZ77
+                compressedPath = createFile(datasetName + "_compressed_lz77");
+                decompressedPath = createFile(datasetName + "_decompressed_lz77");
+                lz77(fileEntry.getAbsolutePath(), compressedPath, decompressedPath, datasetName);
+            }
         }
     }
 

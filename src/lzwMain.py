@@ -1,7 +1,8 @@
 import os   
 import glob
-import encoder
-import decoder
+import lzwEncoder as encoder
+import lzwDecoder as decoder
+import sys
 original_size=0
 compressed_size =0
 decompressed_size =0
@@ -14,7 +15,7 @@ file_path = sys.argv[1]
 result_path = ""
 
 def creat_result_directory():
-    result_path = os.getcwd()+"/results"
+    result_path = file_path+"/results"
     try:
         os.stat(result_path)
     except:

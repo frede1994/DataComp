@@ -7,9 +7,14 @@
     <file url="file://$PROJECT_DIR$/src/arithmeticCoding" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/src/datasets" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/src/golomb" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/golombDecoder.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/golombEncoder.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/golombMain.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/huffman" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/lzwDecoder.py" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/lzwEncoder.py" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/lzwMain.py" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/src/org/apache/commons/io/FilenameUtils.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/src/org/commons" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/src/org/commons" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/src/results" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/src/testFiles" charset="windows-1252" />
